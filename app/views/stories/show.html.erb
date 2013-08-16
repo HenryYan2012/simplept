@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @story.name %>
+</p>
+
+<p>
+  <b>Pt:</b>
+  <%= @story.pt_id %>
+</p>
+
+<p>
+  <b>Pt url:</b>
+  <%= @story.pt_url %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @story.description %>
+</p>
+
+<p>
+  <b>Stroy type:</b>
+  <%= @story.stroy_type %>
+</p>
+
+<p>
+  <b>Estimate:</b>
+  <%= @story.estimate %>
+</p>
+
+<p>
+  <b>Current state:</b>
+  <%= @story.current_state %>
+</p>
+
+<p>
+  <b>Requested by:</b>
+  <%= @story.requested_by_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @story.project_id %>
+</p>
+
+<p>
+  <b>Owned by:</b>
+  <%= @story.owned_by_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

@@ -1,0 +1,18 @@
+default: &DEFAULT
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: <%= `whoami`.strip.inspect %>
+
+development:
+  <<: *DEFAULT
+  database: simplept_development
+
+test: &TEST
+  <<: *DEFAULT
+  database: simplept_test
+
+
+production:
+  <<: *DEFAULT
+  database: simplept_production

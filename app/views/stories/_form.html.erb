@@ -1,0 +1,57 @@
+<%= form_for(@story) do |f| %>
+  <% if @story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% @story.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :stroy_type %><br />
+    <%= f.text_field :stroy_type %>
+  </div>
+  <div class="field">
+    <%= f.label :estimate %><br />
+    <%= f.number_field :estimate %>
+  </div>
+  <div class="field">
+    <%= f.label :current_state %><br />
+    <%= f.text_field :current_state %>
+  </div>
+  <div class="field">
+    <%= f.label :requested_by_id %><br />
+    <%= f.number_field :requested_by_id %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.number_field :project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :owned_by_id %><br />
+    <%= f.number_field :owned_by_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
